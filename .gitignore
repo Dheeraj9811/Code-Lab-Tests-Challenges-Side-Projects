@@ -1,0 +1,62 @@
+# Node.js related files
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python related files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Java related files
+*.class
+*.jar
+*.war
+*.ear
+
+# C++/C related files
+*.o
+*.obj
+*.so
+*.dll
+*.exe
+
+# General IDE files
+.vscode/
+.idea/
+*.iml
+
+# Logs
+*.log
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Build artifacts
+build/
+dist/
+out/
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.vscode
+
+# Recursive ignored directories
+**/debug/
+**/release/
+**/cache/
+**/vscode
+
+# Ignore all compiled or temporary files in any subdirectory
+**/*.swp
+**/*.bak
+**/*.tmp
+**/*.log
+
+**/.git
+

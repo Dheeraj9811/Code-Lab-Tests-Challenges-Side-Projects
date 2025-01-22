@@ -1,0 +1,10 @@
+pandas
+numpy
+pywavelets
+matplotlib
+scipy
+hampel
+tensorflow
+scikit-learn
+difflib
+collections
