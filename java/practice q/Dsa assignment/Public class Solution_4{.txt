@@ -1,0 +1,40 @@
+Public class Solution_4{
+Integer height_x , height_y ;
+        	int x_parent = -1 , y_parent = -1;
+        	x = input() , y = Input()
+        
+        	check(Tree root , x , y, 0);
+        	if(height_x == height_y && x_parent!= y_parent && x_parent != -1 && y_parent != -1)
+            print("yes ")
+        else:
+            print("No")
+
+}
+
+void check(Tree root ,int x ,int y, int level ){  // finding the root location and saveing it height and parent 
+        if(root == null)
+            return;
+	if(height_x != null && height_y != null)    // base case handeling 
+	 return;
+        if(root != null && root.left.data == x){
+            x_parent = root.data;
+            height_x = level;
+        }
+        if(root != null && root.left.data == y){
+            y_parent = root.data;
+            height_y = level;
+	}
+        if(root != null && root.right.data == y){
+            y_parent = root.data;
+            height_y = level;
+        }
+        if(root != null && root.right.data == x){
+            x_parent = root.data;
+            height_x = level;
+        }
+
+        check(root.left, x, y, level+1);       // recursive call for travelling in binary tree 
+        check(root.right, x, y, level+1);      // and increasing the lvl as we are going more inside
+                                            // tree and keeping traCK OF height of tree 
+
+    }

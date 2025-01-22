@@ -1,0 +1,5 @@
+public class Avl_tree {
+    Tree_node root;
+    int count = 0;  // count have no. of id inserted inside Avl tree
+
+    

@@ -1,0 +1,21 @@
+char[] arr = {'a', 'b', 'e', 'c', 'd' ,'i' ,'z' };
+int size = arr.length();
+
+My_stack q = new My_stack();
+
+for(int i = 0; i < n; i++)
+    if(q.isempty());
+        s.puch(arr[i]);
+
+    if((s.peek() > arr[i]) && count < k) { // here k is no of time we can remove 
+			s.pop();
+            count++;
+    
+    else:
+        s.push(arr[i]);
+
+q.reverse()  //according to given question we need first come first out so we are reversing it to get in same order
+		 		// Since we are dealing with stack its LIFO
+while(!s.isempty){
+    print(s.pop())
+}
