@@ -1,0 +1,120 @@
+div{
+    
+    
+    
+}
+body {
+    /* background-color:rgba(0, 255, 123, 0.144); */
+    margin:0;
+    text-align:center;
+    font-family: 'Merriweather', serif;
+    
+    
+}
+p{
+    font-size: 12px;
+}
+h1{
+    font-family: 'Sacramento', cursive; 
+    font-size: 45px;
+    margin: 0 auto 0 auto;
+    color:#66BFBF;
+    line-height:1;
+}
+h2{
+    font-family: 'Montserrat', sans-serif;
+    color:#66BFBF;
+    font-weight:normal;
+}
+h3{
+    color:#11999E;
+}
+.doted{
+    border: 0;
+    
+    border-bottom: 5px dotted #90d2d4;
+    width:100px;
+    margin-bottom: 5px;
+}
+
+/* .red{
+    background-color: red;
+    width:100px;
+    height:100px;
+    display:inline-block;
+    
+    position: relative;
+    left: 207px;
+
+    
+}
+.blue{
+    background-color: blue;
+    width:100px;
+    height:100px ;
+    display: inline-block;
+    position: relative;
+    right : 105px;
+}
+.yellow{
+    background-color: yellow;
+    width:100px;
+    height:100px ;
+    display: inline-block;
+    position: relative;
+    right : 105px;
+
+} */
+.top-container {
+    background-color:rgba(0, 255, 255, 0.144);
+    position: relative;
+    border: 0 0 0 0;
+    padding-top: 100px;
+    
+}
+.pro{
+    font-family: italic; 
+}
+.top-cloud{
+    position: absolute;
+    right: 300px;
+    top: 50px;
+
+}
+.botton-cloud{
+    position: absolute;
+}
+
+.skills {
+    background-color:rgba(0, 255, 123, 0.144);
+    
+    /* text-align: left; */
+    /* width: 50%; */
+    margin: 0 auto;
+}
+.skill-logo1{
+    width: 50px;
+    /* float: left ; */
+    position: relative;
+    margin-right: 20px;
+    
+}
+.skill-h2{
+    display : inline;
+    position: relative;
+}
+/* .container_2{
+    height:200px;
+    width:200px;
+    margin-left: 250px;
+    
+    
+    border: 10px solid rgba(26, 255, 0, 0.485);
+}
+.container_3{
+    height:200px;
+    width:200px;
+    margin-left: 465px;
+
+    border: 20px solid red;
+} */

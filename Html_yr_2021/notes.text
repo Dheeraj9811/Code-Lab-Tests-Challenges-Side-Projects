@@ -1,0 +1,7 @@
+bootstrap{
+    1) row and column
+        1.1) coln are divided into 12 parts max.   we can decide accroding to size how many col will be shown in a screen size
+
+    1) container are responsive type which chnage automatically according with the screen size
+        1.1) fluid container cover whole screen with no margins
+}
