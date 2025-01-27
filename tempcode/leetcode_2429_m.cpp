@@ -34,3 +34,37 @@ Constraints:
 1 <= num1, num2 <= 109
 
 */
+class Solution {
+public:
+    int minimizeXor(int num1, int num2) {
+        int nob = 0 , noa = 0;
+        int b = num2 , a = num1;
+        while(b >0){
+            b = b&(b-1);
+            ++nob;
+        }
+        while( a>0){
+            a = a&(a-1);
+            ++noa;
+        }
+        int ans = 0;
+        if(noa>nob){
+            ans = num1;
+            while(noa>nob){
+                ans = ans&(ans-1);
+                noa--;
+            }
+        }
+        else{
+            ans = num1;
+            while(noa<nob){
+                int mask = ~ans&(ans+1);
+                ans = ans|mask;
+                noa++;
+            }
+        }
+
+        return ans;
+
+    }
+};
