@@ -50,7 +50,22 @@ The values in derived are either 0's or 1's
 */
 class Solution {
 public:
-    bool doesValidArrayExist(vector<int>& derived) {
-        
+    // solution come from observation drive[i] = orginal[i] ^ orginal[i+1] , if i+1>n so take 0 index. let we have orgianl array [a,b,c,d,e,f]
+    // drive arr = [a^b , b^c, c^d, d^e, f^a]   we do xor sum of drive we get zero since everthing is comming twic so valid drive is whose xor sum is zero , else false
+    bool doesValidArrayExist(vector<int>&& d) {
+        int ans = 0;
+        for(int a : d){
+            ans ^= a;
+        }
+
+        return !bool(ans); // bool function anything > 0 is cosider as true , so do not of it
     }
 };
+
+int main(int argc, char const *argv[])
+{
+    /* code */
+    Solution sol;
+    std::cout<<sol.doesValidArrayExist(vector<int>{1,0,1});
+    return 0;
+}
