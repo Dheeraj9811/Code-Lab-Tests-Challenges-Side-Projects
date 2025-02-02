@@ -74,7 +74,7 @@ public:
         for(int i_ = 0;i_<4;i_++){
             int diri = dir[i_].first;
             int dirj = dir[i_].second;
-            int dire = arr[i][j];
+            int dire =  arr[i][j];
 
             dfs(diri,dirj,arr,move(visi),cost+(dire == i-1) ? 0:1);
         }
