@@ -1,34 +1,45 @@
+#include <windows.h>
 #include <iostream>
-#include <vector>
-#include <algorithm>
+#include <thread>
+#include <chrono>
 
-using namespace std;
-long long  moveRobot1(int r1, int c1, vector<vector<int>>& grid, vector<vector<long long>>& dp) {
-    int n = grid[0].size();
+void pressKey(WORD key) {
+    INPUT ip;
+    ip.type = INPUT_KEYBOARD;
+    ip.ki.wVk = key;  // Virtual Key Code
+    ip.ki.dwFlags = 0;  // Key press
+    SendInput(1, &ip, sizeof(INPUT));
 
-    // Base case: Robot 1 reaches the destination (1, n-1)
-    if (r1 == 1 && c1 == n - 1) {
-        return grid[r1][c1];
-    }
+    Sleep(50);  // Small delay
 
-    // Check memoization table
-    if (dp[r1][c1] != -1) {
-        return dp[r1][c1];
-    }
-
-    long long result = 0;
-    // Move right if possible
-    if (c1 + 1 < n) {
-        result = max(result, (long long)grid[r1][c1] + moveRobot1(r1, c1 + 1, grid, dp));
-    }
-    // Move down if possible
-    if (r1 + 1 < 2) {
-        result = max(result, (long long)grid[r1][c1] + moveRobot1(r1 + 1, c1, grid, dp));
-    }
-
-    // Store the result in memo table
-    dp[r1][c1] = result;
-    return result;
+    ip.ki.dwFlags = KEYEVENTF_KEYUP;  // Key release
+    SendInput(1, &ip, sizeof(INPUT));
 }
 
-https://leetcode.com/problems/grid-game/solutions/5821373/best-solution-you-can-find-telling-why-dp-is-not-working/?envType=daily-question&envId=2025-01-21
+void moveMouse(int x, int y) {
+    SetCursorPos(x, y);  // Moves the mouse cursor to (x, y) position
+}
+
+int main() {
+    int startX = 100, startY = 100;
+    // Final position (e.g., (500, 500))
+    int endX = 500, endY = 500;
+    // getting screen resolution 
+    int screenWidth = GetSystemMetrics(SM_CXSCREEN);
+    int screenHeight = GetSystemMetrics(SM_CYSCREEN);
+
+    std::cout << "Moving mouse from (" << startX << ", " << startY << ") to (" << endX << ", " << endY << ")" << std::endl;
+    
+    // Move the mouse to the initial positiona
+    moveMouse(startX, startY);
+    // std::this_thread::sleep_for(std::chrono::milliseconds(500));  // Delay for visual effect
+
+    // Move the mouse to the final position
+    moveMouse(endX, endY);
+
+    moveMouse(screenWidth,screenHeight);
+
+    std::cout << "Simulating 'A' key press..." << std::endl;
+    pressKey(0x41);  // 0x41 = 'A'
+    return 0;
+}
