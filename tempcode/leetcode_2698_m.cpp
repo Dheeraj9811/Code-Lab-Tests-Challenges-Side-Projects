@@ -46,4 +46,22 @@ public:
     int punishmentNumber(int n) {
         
     }
+
+    void solve(int i , int n, string val, vector<string>& ans){
+        if(i > val.size()){
+            // do something
+            return ;
+        }
+
+        string a = ans[i];
+        // partition
+        ans.push_back(a);
+        solve(i+1, n , val ,ans );
+
+        // not partition
+        if(ans.size() >1){
+            ans.erase(ans.end()-1);
+        }
+        ans[]
+    }
 };
